@@ -112,7 +112,7 @@ Submit a pull request.
 
 == License
 
-Wave is distributed under the MIT License. See LICENSE for more details.
+Wave is distributed under the CC0 1.0 Universal. See LICENSE for more details.
 
 == Version
 
