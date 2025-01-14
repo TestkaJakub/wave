@@ -26,12 +26,18 @@ If you prefer to build the application from source, ensure you have the Rust too
 
 Clone the repository:
 
+[source,]
+----
 git clone https://github.com/TestkaJakub/wave.git
 cd wave
+----
 
 Build the application:
 
+[source,]
+----
 cargo build --release
+----
 
 The executable can be found in the target/release/ directory.
 
