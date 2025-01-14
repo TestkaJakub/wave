@@ -1,0 +1,113 @@
+= wave: Linear Chirp Generator
+
+wave is a Rust-based Windows application that generates a linear chirp signal, which smoothly sweeps between two frequencies over a specified duration, and saves the resulting audio to a .wav file. The application offers a flexible CLI and runtime experience for defining parameters.
+
+== Features
+
+Generate linear chirp signals between a start frequency and an end frequency.
+
+Specify the duration of the chirp.
+
+Save the generated audio to a .wav file.
+
+Provide parameters via CLI arguments or interactively at runtime.
+
+== Installation
+
+Using Prebuilt Releases
+
+Download the latest release from the GitHub Releases page: wave Releases
+
+Run the executable.
+
+Building from Source
+
+If you prefer to build the application from source, ensure you have the Rust toolchain installed. If not, download it from https://rustup.rs/. Then:
+
+Clone the repository:
+
+git clone <repository_url>
+cd wave
+
+Build the application:
+
+cargo build --release
+
+The executable can be found in the target/release/ directory.
+
+== Usage
+
+The application can be run with or without providing CLI arguments. Missing arguments will be requested interactively at runtime.
+
+=== CLI Arguments
+
+wave [OPTIONS]
+
+==== Options
+
+-i, --initial_freq <FREQ>
+: The starting frequency of the chirp in Hz (e.g., 440).
+
+-e, --ending_freq <FREQ>
+: The ending frequency of the chirp in Hz (e.g., 880).
+
+-d, --duration <SECONDS>
+: The duration of the chirp in seconds (e.g., 5).
+
+-o, --output_name <FILE>
+: The name of the output .wav file (e.g., chirp.wav).
+
+-h, --help
+: Display help information.
+
+=== Examples
+
+Generate a chirp from 440 Hz to 880 Hz over 5 seconds and save it as chirp.wav:
+
+wave -i 440 -e 880 -d 5 -o chirp.wav
+
+Run the application interactively, skipping CLI arguments:
+
+wave
+
+The application will prompt for:
+
+Initial frequency (Hz)
+
+Ending frequency (Hz)
+
+Duration (seconds)
+
+Output file name (.wav)
+
+== Development
+
+To run the application in development mode:
+
+cargo run
+
+You can also pass arguments directly:
+
+cargo run -- -i 440 -e 880 -d 5 -o chirp.wav
+
+== Contributing
+
+Contributions are welcome! Please follow these steps:
+
+Fork the repository.
+
+Create a feature branch: git checkout -b feature/your-feature.
+
+Commit your changes: git commit -m 'Add your feature'.
+
+Push to the branch: git push origin feature/your-feature.
+
+Submit a pull request.
+
+== License
+
+Wave is distributed under the MIT License. See LICENSE for more details.
+
+== Version
+
+Wave v0.1.0
